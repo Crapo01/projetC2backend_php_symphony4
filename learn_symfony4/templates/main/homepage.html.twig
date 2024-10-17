@@ -1,0 +1,36 @@
+{% extends 'base.html.twig'%}
+{# place le html dans blockbody du base.html.twig #}
+{%block body%}
+
+<h1>HELLO WORLD!</h1>
+
+<p>This value is passed thru params: {{valueGetFromParams}}</p>
+{% if(valueGetFromParams<1)%}
+<p> We have No ships here...</p>
+{% else%}
+<p> We have some ships here...</p>
+{% endif%}
+
+<div>
+    <h2>My Ship</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            {# | is the way to use filters #}
+            <td>{{ myShip.name }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ myShip.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ myShip.captain|upper }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ myShip.status }}</td>
+        </tr>
+    </table>
+</div>
+{%endblock%}

@@ -42,3 +42,26 @@ set in .env folder  APP_ENV= DEV/PROD/TEST   (!!!!security issues!!!!)
 composer install
 
 
+# fix code style package
+
+cmd:
+composer require cs-fixer-shim
+
+usage:  
+./vendor/bin/php-cs-fixer  
+to show all options
+
+./vendor/bin/php-cs-fixer fix
+
+# install TWIG
+
+cmd:  
+composer require twig
+
+# install DEBUG
+
+cmd:  
+composer require debug
+
+
+
